@@ -1,0 +1,43 @@
+<div id="expense-tracker">
+  <h2>Travel Expense Tracker</h2>
+  <form id="home-currency-form">
+    <label for="home-currency">Home Currency:</label>
+    <select id="home-currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <option value="JPY">JPY</option>
+      <option value="AUD">AUD</option>
+      <option value="CAD">CAD</option>
+    </select>
+  </form>
+  <form id="expense-form">
+    <input type="text" id="description" placeholder="Description" required>
+    <input type="number" id="amount" placeholder="Amount" required>
+    <select id="currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <option value="JPY">JPY</option>
+      <option value="AUD">AUD</option>
+      <option value="CAD">CAD</option>
+    </select>
+    <input type="date" id="expense-date" placeholder="Date (optional)">
+    <button type="submit">Add Expense</button>
+  </form>
+  <ul id="expense-list"></ul>
+  
+  <div id="dashboard">
+    <h3>Dashboard</h3>
+    <div class="date-filters">
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date">
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date">
+      <button id="filter-btn" type="button">Filter</button>
+    </div>
+    <div class="summary">
+      Total Expenses: <span id="total-expenses">0</span> <span id="home-currency-display">USD</span>
+    </div>
+  </div>
+</div>
