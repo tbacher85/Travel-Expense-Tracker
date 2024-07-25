@@ -1,68 +1,49 @@
 Travel Expense Tracker
 
-Overview
-
-The Travel Expense Tracker is a simple web application designed for digital nomads and travelers to manage and track their expenses. The app allows users to log expenses, view a dashboard summary, convert currencies, and generate reports based on date ranges.
+A simple web-based expense tracker application to help manage and monitor your spending. This app allows users to log expenses, view entries, and filter records by date.
 
 Features
+Log Expenses: Enter and save expenses with details such as description, amount, currency, category, and date.
+View Entries: View a list of logged expenses in a table format.
+Filter Entries: Filter entries by date range.
+Edit and Delete: Edit or delete existing expenses.
+Dynamic Form: Specify additional details if "Other" category is selected.
+Screenshots
 
-Expense Logging: Quickly log expenses with descriptions, amounts, currencies, and optional dates.
-Dashboard View: See a summary of total expenses and budget status in your home currency.
-Currency Conversion: Automatically convert logged expenses to your chosen home currency.
-Date-Based Dashboard: Filter expenses and view summaries based on custom date ranges.
-Expense Editing: Edit previously logged expenses to correct any mistakes.
-Home Currency Selection: Choose your home currency from a list of supported options.
 
-User Stories Covered
+Technologies Used
+HTML
+CSS
+JavaScript
+Installation
+To get started with this project, follow these steps:
 
-Log expenses quickly.
-View a summary of expenses and budget status.
-Automatic currency conversion.
-View a dashboard based on date ranges.
-Edit expenses.
+Clone the Repository:
 
-Getting Started
+bash
+Copy code
+git clone https://github.com/tbacher85/Travel-Expense-Tracker.git
+Navigate to the Project Directory:
 
-Prerequisites
-A modern web browser (e.g., Chrome, Firefox, Safari)
+bash
+Copy code
+cd Travel-Expense-Tracker
+Open index.html in a web browser.
 
 Usage
-Log Expenses:
-Enter a description, amount, currency, and optional date in the expense form.
-Click "Add Expense" to save the entry.
+Log an Expense: Go to the "Log Expense" section, fill out the form, and click "Save Expense" to add a new expense.
+View Entries: Click "View Entries" to switch to the entries page where you can see all logged expenses.
+Filter Entries: Use the date filters to view expenses within a specific date range.
+Edit or Delete: On the entries page, click the "Edit" button to modify an entry or "Delete" to remove it.
+Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your proposed changes.
 
-Set Home Currency:
-Select your home currency from the dropdown menu.
-
-View Dashboard:
-Use the dashboard to see a summary of your expenses.
-Apply date filters to view expenses within specific date ranges.
-
-Edit Expenses:
-Click the "Edit" button next to any expense to modify its details.
-
-Local Storage
-Expenses are saved in the browser’s localStorage, allowing you to persist data within the same browser.
-
-Limitations
-Cross-Device Sync: Data is stored locally and does not sync across different devices or browsers.
-Monthly Reports: The current version does not include functionality for generating monthly reports.
-
-How to Contribute
-Fork the Repository: Fork this repository to your own GitHub account.
-
-Clone Your Fork: git clone https://github.com/your-username/travel-expense-tracker.git
-
-Create a Feature Branch: git checkout -b feature/your-feature
-
-Commit Changes: git commit -am 'Add some feature'
-
-Push to the Branch: git push origin feature/your-feature
-
-Create a Pull Request: Open a pull request with a description of your changes.
+Fork the Repository.
 
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
-Thanks to the open-source community for providing tools and libraries that made this project possible.
+Contact
+For any inquiries, please contact timothe.bacher@gmail.com
+
+
