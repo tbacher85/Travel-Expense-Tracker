@@ -1,43 +1,102 @@
-<div id="expense-tracker">
-  <h2>Travel Expense Tracker</h2>
-  <form id="home-currency-form">
-    <label for="home-currency">Home Currency:</label>
-    <select id="home-currency">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="GBP">GBP</option>
-      <option value="JPY">JPY</option>
-      <option value="AUD">AUD</option>
-      <option value="CAD">CAD</option>
-    </select>
-  </form>
-  <form id="expense-form">
-    <input type="text" id="description" placeholder="Description" required>
-    <input type="number" id="amount" placeholder="Amount" required>
-    <select id="currency">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="GBP">GBP</option>
-      <option value="JPY">JPY</option>
-      <option value="AUD">AUD</option>
-      <option value="CAD">CAD</option>
-    </select>
-    <input type="date" id="expense-date" placeholder="Date (optional)">
-    <button type="submit">Add Expense</button>
-  </form>
-  <ul id="expense-list"></ul>
-  
-  <div id="dashboard">
-    <h3>Dashboard</h3>
-    <div class="date-filters">
-      <label for="start-date">Start Date:</label>
-      <input type="date" id="start-date">
-      <label for="end-date">End Date:</label>
-      <input type="date" id="end-date">
-      <button id="filter-btn" type="button">Filter</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logging Section -->
+        <section id="logging-section" class="section">
+            <h2>Log Expense</h2>
+            <form id="expense-form">
+                <label for="description">Description:</label>
+                <input type="text" id="description" required>
+
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" step="0.01" required>
+
+                <label for="currency">Currency:</label>
+                <select id="currency" required>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="AUD">AUD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CNY">CNY</option>
+                    <option value="NZD">NZD</option>
+                    <option value="SEK">SEK</option>
+                    <option value="MXN">MXN</option>
+                    <option value="INR">INR</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <div id="other-category-container">
+                    <label for="other-category">Specify Category:</label>
+                    <input type="text" id="other-category">
+                </div>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+
+                <label for="expense-category">Category:</label>
+                <select id="expense-category">
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="rent">Rent</option>
+                    <option value="medical">Medical</option>
+                    <option value="education">Education</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="details">Details:</label>
+                <input type="text" id="details">
+
+                <button type="submit">Save Expense</button>
+            </form>
+            <button id="go-to-entries" class="nav-button">View Entries</button>
+        </section>
+
+        <!-- Entries Section -->
+        <section id="entries-section" class="section" style="display: none;">
+            <h2>View Entries</h2>
+            <div id="dashboard-controls">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date">
+                
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date">
+                
+                <button id="filter-dates">Filter Dates</button>
+            </div>
+            <table id="expenses-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Currency</th>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Details</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Expenses will be dynamically inserted here -->
+                </tbody>
+            </table>
+            <button id="back-to-logging" class="nav-button">Back to Log Expense</button>
+        </section>
+
+        <!-- Popup Notification -->
+        <div id="popup" class="popup"></div>
     </div>
-    <div class="summary">
-      Total Expenses: <span id="total-expenses">0</span> <span id="home-currency-display">USD</span>
-    </div>
-  </div>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
